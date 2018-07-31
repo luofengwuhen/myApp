@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>VIP视频解析</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label style=" max-width: 25% !important;" >解析接口</ion-label>
+      <ion-select style=" max-width: 75% !important;"   [(ngModel)]="jk">
+        <ion-option value="http://jx.618g.com/?url=">线路一</ion-option>
+        <!-- <ion-option value="http://jx.598110.com/duo/index.php?url=">②号通用vip多线路系统【稳定通用】</ion-option>
+        <ion-option value="http://jx.598110.com/index.php?url=">①号通用vip引擎系统【稳定通用】</ion-option>  -->
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>播放地址</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="adress"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button   ion-button style="height:35px; font-size:15px" block (click)="play()">解  析  播  放</button>
+    </ion-item>
+
+    <vg-player>
+      <video [vgMedia]="media" #media id="videoZhibo"   controls>
+          <source [src]="https://youku.com-youku.com/20180330/W8XENbyc/index.m3u8" type="video/mp4">
+      </video>
+      </vg-player>
+  
+   
+      <!-- <iframe data-tap-disabled="true" style="min-height: 100%;width:100%;" [src]="CreditRuleUrl"></iframe> -->
+   
+
+    <!-- <video controls="controls" preload="metadata"  webkit-playsinline="webkit-playsinline" class="videoPlayer">
+      <source src="https://player.vimeo.com/external/85569724.sd.mp4?s=43df5df0d733011263687d20a47557e4" type="video/mp4" />
+     </video> -->
+   
+   
+        <!-- <video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" 
+        class="videoPlayer">
+          <source src="http://jx.618g.com/?url=https://v.qq.com/x/cover/wi8e2p5kirdaf3j.html" 
+          type="video/mp4"/>
+        </video> -->
+     
+    <!-- <vg-player>
+      <vg-overlay-play></vg-overlay-play>
+      <vg-buffering></vg-buffering>
+      <vg-controls [vgAutohide]="true" [vgAutohideTime]="5">
+        <vg-play-pause></vg-play-pause>
+        <vg-time-display [vgProperty]="'current'"></vg-time-display>
+        <vg-scrub-bar>
+          <vg-scrub-bar-current-time [vgSlider]="true"></vg-scrub-bar-current-time>
+          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+        </vg-scrub-bar>
+        <vg-time-display [vgProperty]="'total'"></vg-time-display>
+        <vg-fullscreen></vg-fullscreen>
+      </vg-controls>
+      <video #media [vgMedia]="media" poster="../../assets/imgs/logo.png" src="http://jx.618g.com/?url=https://v.qq.com/x/cover/wi8e2p5kirdaf3j.html" crossorigin> </video>
+    </vg-player> -->
+
+    <!-- <vg-player (onPlayerReady)="onPlayerReady($event)">
+      <vg-overlay-play></vg-overlay-play>
+      <vg-buffering></vg-buffering>
+      <vg-scrub-bar>
+         <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+         <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+      </vg-scrub-bar>
+      <vg-controls>
+         <vg-play-pause></vg-play-pause>
+         <vg-playback-button></vg-playback-button>
+         <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+         <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+         <vg-track-selector></vg-track-selector>
+         <vg-volume></vg-volume>
+      </vg-controls> -->
+      <!-- <video #media   [vgMedia]="media"  [src]="mediaUrl" id="singleVideo"   crossorigin>
+      </video>  
+   </vg-player>-->
+ 
+
+  </ion-list>
+
+</ion-content>
